@@ -11,7 +11,7 @@ const ContactCards = (props) => {
   const contacts = [
     {
       key: Math.random(),
-      firstName: "Ivan ",
+      firstName: "Ivan",
       lastName: "Ivanovic",
       img: "https://randomuser.me/api/portraits/men/35.jpg",
       email: "ivan@gmail.com",
@@ -19,7 +19,7 @@ const ContactCards = (props) => {
     },
     {
       key: Math.random(),
-      firstName: "Milan ",
+      firstName: "Milan",
       lastName: "Mitrovic",
       img: "https://randomuser.me/api/portraits/men/28.jpg",
       email: "milan@gmail.com",
@@ -27,7 +27,7 @@ const ContactCards = (props) => {
     },
     {
       key: Math.random(),
-      firstName: "Stefan ",
+      firstName: "Stefan",
       lastName: "Krejovic",
       img: "https://randomuser.me/api/portraits/men/91.jpg",
       email: "stefan@gmail.com",
@@ -35,7 +35,7 @@ const ContactCards = (props) => {
     },
     {
       key: Math.random(),
-      firstName: "Radovan ",
+      firstName: "Radovan",
       lastName: "Miletic",
       img: "https://randomuser.me/api/portraits/men/41.jpg",
       email: "radovan@gmail.com",
@@ -43,7 +43,7 @@ const ContactCards = (props) => {
     },
     {
       key: Math.random(),
-      firstName: "Goran ",
+      firstName: "Goran",
       lastName: "Mitrovic",
       img: "https://randomuser.me/api/portraits/men/61.jpg",
       email: "goran@gmail.com",
@@ -140,7 +140,7 @@ const ContactCards = (props) => {
                 }}
                 src={contact.img}
               />
-              <p>{contact.firstName + contact.lastName}</p>
+              <p>{contact.firstName + " " + contact.lastName}</p>
 
               <FontAwesomeIcon
                 icon={faTrashAlt}
@@ -161,7 +161,7 @@ const ContactCards = (props) => {
           return (
             <div className="card" key={contact.key}>
               <img src={contact.img} />
-              <p>{contact.firstName + contact.lastName}</p>
+              <p>{contact.firstName + " " + contact.lastName}</p>
             </div>
           );
         })}
@@ -180,7 +180,11 @@ const ContactCards = (props) => {
         />
       )}
       {addContact && (
-        <AddContact addContact={addContactHandler} toggle={toggleAddContact} />
+        <AddContact
+          data={data}
+          setDataHandler={setData}
+          toggle={toggleAddContact}
+        />
       )}
 
       {data.length === 0 && <span>No contacts found to display...</span>}
