@@ -1,4 +1,5 @@
 import "./App.scss";
+import React from "react";
 import ContactCards from "./components/ContactCards/ContactCards";
 
 const App = () => {
