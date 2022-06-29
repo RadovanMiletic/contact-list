@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./AddContact.scss";
+import "./AddContact.css";
 
 const AddContact = (props) => {
   const [firstName, setFirstName] = useState("");

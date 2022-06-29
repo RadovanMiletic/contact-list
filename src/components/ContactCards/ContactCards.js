@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ContactCards.scss";
+import "./ContactCards.css";
 import "../Modal/Modal";
 import Modal from "../Modal/Modal";
 import ContactDetails from "../ContactDetails/ContactDetails";
@@ -78,12 +78,18 @@ const ContactCards = (props) => {
     } else {
       const filteredData = contacts.filter((contact) => {
         return Object.keys(contact).some((key) => {
-          return contact[key].toString().toLowerCase().includes(lowerCaseValue);
+          return contact[key]
+            .toString()
+            .toLowerCase()
+            .includes(lowerCaseValue);
         });
       });
       const filterFData = filteredContacts.filter((contact) => {
         return Object.keys(contact).some((key) => {
-          return contact[key].toString().toLowerCase().includes(lowerCaseValue);
+          return contact[key]
+            .toString()
+            .toLowerCase()
+            .includes(lowerCaseValue);
         });
       });
       setData(filteredData);
