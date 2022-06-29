@@ -34,18 +34,18 @@ body.active-modal {
   border-radius: 3px;
   min-width: 45rem;
   min-height: 14rem;
+}
 
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-  }
-  .details {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-  }
+.contact-details-content .details {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.contact-details-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
 }
 
 .close-contact-details {

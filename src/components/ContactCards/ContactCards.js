@@ -115,8 +115,6 @@ const ContactCards = (props) => {
     setData(contactList);
   };
 
-  const addContactHandler = () => {};
-
   return (
     <div className="cards">
       <FontAwesomeIcon
